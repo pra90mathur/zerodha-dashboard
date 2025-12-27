@@ -15,6 +15,9 @@ const Holdings = () => {
     axios
       .get(`${backendUrl}/holdings`)
       .then((res) => {
+        console.log("TYPE:", typeof res.data);
+        console.log("IS ARRAY:", Array.isArray(res.data));
+        console.log("DATA:", res);
         setAllHoldings(res.data || []);
       })
       .catch((err) => {
