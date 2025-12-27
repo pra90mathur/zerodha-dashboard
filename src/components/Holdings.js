@@ -22,7 +22,7 @@ const Holdings = () => {
       });
   }, [backendUrl]);
 
-  const labels = allHoldings.map((stock) => stock.name);
+  const labels = allHoldings.map((subArray) => subArray["name"]);
 
   const data = {
     labels,
